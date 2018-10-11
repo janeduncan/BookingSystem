@@ -5,4 +5,6 @@ import java.util.List;
 public interface CourseRepositoryCustom {
 
     List<Course> getAllCoursesByRating(int rating);
+
+    List<Course> getAllCoursesForCustomer(Long customerId);
 }

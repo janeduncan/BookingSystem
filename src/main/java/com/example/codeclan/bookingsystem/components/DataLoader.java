@@ -32,10 +32,10 @@ public class DataLoader implements ApplicationRunner {
         Customer customer1 = new Customer("Jane", "Glasgow", 30);
         customerRepository.save(customer1);
 
-        Course course1 = new Course("Software Development", "Glasgow", 3);
+        Course course1 = new Course("Computing", "Glasgow", 3);
         courseRepository.save(course1);
 
-        Booking booking1 = new Booking("25/05/2018", course1, customer1);
+        Booking booking1 = new Booking("25-05-2018", course1, customer1);
         bookingRepository.save(booking1);
 
     }
