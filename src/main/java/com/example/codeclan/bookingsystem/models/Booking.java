@@ -1,6 +1,7 @@
 package com.example.codeclan.bookingsystem.models;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 import javax.persistence.*;
 
@@ -15,12 +16,12 @@ public class Booking {
     @Column(name = "date")
     private String date;
 
-    @JsonIgnore
+    @JsonIgnoreProperties("bookings")
     @ManyToOne
     @JoinColumn(name = "course_id", nullable = false)
     private Course course;
 
-    @JsonIgnore
+    @JsonIgnoreProperties("bookings")
     @ManyToOne
     @JoinColumn(name = "customer_id", nullable = false)
     private Customer customer;
